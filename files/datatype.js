@@ -2,9 +2,9 @@
 
 // allert("hello")  //thid wont work here(not working on brouser)
 
-let name="anisur" //"string" can also be in single quotes('')
+let name="aashish" //"string" can also be in single quotes('')
 let age=19;//int
-let isGay=false
+let isGay=true
 
 //number => 2^53(max number)
 //boollean => true/false

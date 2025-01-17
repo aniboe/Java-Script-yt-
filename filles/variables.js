@@ -1,6 +1,6 @@
 const accountId=14321
 let accountEmail="tempmails@gmail.com"
-var accountPassword="12345"//let and var(not used now) are two mathod of declaring string
+var accountPassword="12345"//let and var(not used now) are two mathod of declaring variables
 accountCity="delhi"//string can be declared without var and let(not recomended)
 
 //accountId=2

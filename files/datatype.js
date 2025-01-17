@@ -15,7 +15,6 @@ let isGay=false
 
 //object 
 
-console.log(typeof"anisur")
-console.log(typeof"null")
-console.log(typeof"undefined")
-
+console.log(typeof name);//out: string
+console.log(typeof null);//out : object
+console.log(typeof undefined);//out: undefined

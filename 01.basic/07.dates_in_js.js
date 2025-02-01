@@ -18,13 +18,13 @@
 // let myCreatedDate = new Date(2024,0,6)// yyyy , mm , dd (month starts from zero)
 // let myCreatedDate = new Date(2024,0,6,5,6,8)
 // let myCreatedDate = new Date("2024-1-6")// yyyy-mm-dd
-let myCreatedDate = new Date("1-6-2024")// mm-dd-yyyy
+// let myCreatedDate = new Date("1-6-2024")// mm-dd-yyyy
 
 
 // console.log(myCreatedDate.toDateString()); // Sat Jan 06 2024
 // console.log(myCreatedDate.toLocaleString());// 1/6/2024, 5:06:08 AM
 // console.log(myCreatedDate.toLocaleString()); // 1/6/2024, 12:00:00 AM
-console.log(myCreatedDate.toLocaleString()); // 1/6/2024, 12:00:00 AM
+// console.log(myCreatedDate.toLocaleString()); // 1/6/2024, 12:00:00 AM
 
 let myTimeStamp = new Date.now()
 console.log(myTimeStamp);

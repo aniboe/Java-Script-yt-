@@ -5,7 +5,7 @@
 
 //=============objets litrals
 
-const mySymbol = Symbol("key1")// to makke symbol 
+const mySymbol = Symbol("key1")// to make symbol 
 
 const jsUser = {
     name: "anisur",

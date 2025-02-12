@@ -56,6 +56,45 @@ function LoginUserMessage(username = "sam"){ // "sam" here is a default value, i
     }
     return `${username} just logged in`
 }
-console.log(LoginUserMessage("anisur"));
-console.log(LoginUserMessage()); // if nothing is passed than output: undefined just logged in
- 
+// console.log(LoginUserMessage("anisur"));
+// console.log(LoginUserMessage()); // if nothing is passed than output: undefined just logged in
+
+//#########################################################################
+
+// function calculatingPrice(...num1){ // here (...) is a rest operator, makes anarray of multiple/single values given to it
+//     return num1
+// }
+// console.log(calculatingPrice(400));
+
+// 2nd case
+function calculatingPrice(val1,val2, ...num1){ // "val1" and "val2" will tale first two consuctive value and rest will be turned into an array and returned via "num1"
+    return num1
+}
+// console.log(calculatingPrice(200,300,500,600,400));// output: [ 500, 600, 400 ]
+
+
+
+//##########
+// const user = {
+//     username: "anisur",
+//     price: 0
+// }
+
+function handleObject(anyobjet){
+    console.log(`user name is ${anyobjet.username} and price is ${anyobjet.price}`);
+}
+// handleObject(user) // passingn "user" objcet in function
+//      or
+handleObject({username: "anisur", // here insted of using "user"(object) we are passing object directly while calling function 
+    price: "less"
+})
+//###########
+
+
+const myArray = [200,400,600,700]
+
+function secondVal(anyArray){
+    console.log(anyArray[1]);
+}
+
+secondVal(myArray)// also can db done similarly like line 88

@@ -51,12 +51,17 @@ if (true){
 
 //############################### interesting ##########################
 
+console.log(addone(5)); // in this way of defining function we can call funcion before function defination
+
 function addone(num){
     return num + 1
 }
 
-console.log(addone(5));
 
+// addTwo(3)// unlike line 54, this gives error because function declration is different
 
-const addTwo =  function(num)
-
+const addTwo =  function(num){ // another way to make function also called expretion 
+    return num + 2
+}
+addTwo(3)
+//############################################################

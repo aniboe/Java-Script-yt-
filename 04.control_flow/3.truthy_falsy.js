@@ -47,3 +47,7 @@ const empObj = {}
 if (Object.keys(empObj).length === 0){ // Object.keys gives an "array" of keys(look into "03.objects.js")
     console.log("object is empty");
 }
+
+
+
+

@@ -49,5 +49,22 @@ if (Object.keys(empObj).length === 0){ // Object.keys gives an "array" of keys(l
 }
 
 
+// ----------------------Nullish Coalescing Operator (??): null undefined
 
+let val1;
+// val1 = 5 ?? 10 // takes first value ie. 5
+// console.log(val1);
+
+// val1 = null ?? 10 // doesn't take null
+// console.log(val1);
+
+val1 = undefined ?? 10 // removes "undefined"
+console.log(val1);
+
+// ----------------------Ternary Operator
+
+// condition ? true : false
+
+const teaPrice = 100
+teaPrice >= 80 ? console.log("less than 80") : console.log("more than 80");
 

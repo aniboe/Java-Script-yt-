@@ -39,7 +39,7 @@
 
 // const balance = 1000
 
-// if (balance > 500) console.log("test"); // also works likes that for only one line
+// if (balance > 500) console.log("test") , console.log("test"); // also works likes that for only one line(not good for more than one line)
 
 
 // -------------------------------------Nesting--------------------------

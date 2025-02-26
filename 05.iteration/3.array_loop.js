@@ -49,6 +49,7 @@ map.set('in','india')
 
 
 // // following method doesnt work because object cant be iterated using this method (for of loop)
+// look into next file(4.four.js) for answer 
 // const myObject = {
 //     "game1" : "NFS",
 //     "game2" : "DGB",

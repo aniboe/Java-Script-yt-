@@ -22,9 +22,27 @@
 
 // /////////////////////// OPTIMISED //////////////
     function addOptimisedLanguage(langName){
-        const li =document.createElement('li')
+        const li =document.createElement("li")
         li.appendChild(document.createTextNode(langName))
-        document.querySelector('language').appendChild(li)
+        document.querySelector('.language').appendChild(li)
+
     }
+    addOptimisedLanguage('golang')
+
+    // Edit
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo" // un-optimised
+    const newLine = document.createElement('li')
+    newLine.textContent = "Mojo"
+    secondLang.replaceWith(newLine)
+
+    // Edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // remove 
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
 </script>
 </html>

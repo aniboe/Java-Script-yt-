@@ -23,8 +23,8 @@ const body = document.querySelector("body")
 buttons.forEach(function(button){
   console.log(button)
   button.addEventListener("click",function(evnt){
-    // console.log(evnt)
-    // console.log(evnt.target)
+    console.log(evnt)
+    console.log(evnt.target)
 
     if (evnt.target.id === "grey"){
       body.style.backgroundColor = evnt.target.id
@@ -41,7 +41,36 @@ buttons.forEach(function(button){
     if (evnt.target.id === "pink"){
       body.style.backgroundColor = evnt.target.id
     }
+
+    
     //        with switch 
+
+    switch(evnt.target.id){
+      case "grey":
+        body.style.backgroundColor = evnt.target.id
+        break
+
+      case "white":
+        body.style.backgroundColor = evnt.target.id
+        break
+
+      case "blue":
+        body.style.backgroundColor = evnt.target.id
+        break
+
+      case "yellow":
+        body.style.backgroundColor = evnt.target.id
+        break
+
+      case "pink":
+        body.style.backgroundColor = evnt.target.id
+        break
+
+        default:
+          console.log("IT WORKS I GUES")
+          break
+
+    }
   })
 })
 

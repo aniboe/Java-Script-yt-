@@ -93,6 +93,19 @@
 
     document.querySelector('#images').addEventListener('click',function(evnt){
         console.log(evnt.target.parentNode);
+
+        console.log(evnt.target.tagName);
+
+        if(evnt.target.tagName === 'IMG' ){
+
+            console.log(evnt.target.id);
+            let removIt = evnt.target.parentNode
+            removIt.remove() // first method
+            // removIt.parentNode.removeChild(removIt)  // 2nd method
+        }
+        
+        
+
         
     },false)
 

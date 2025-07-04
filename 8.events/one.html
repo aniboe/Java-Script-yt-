@@ -55,10 +55,10 @@
     // },false)
     
 
-    document.getElementById('images').addEventListener('click',function(event0){
-        console.log("clicked inside the ul");
+    // document.getElementById('images').addEventListener('click',function(event0){
+    //     console.log("clicked inside the ul");
         
-    },true)  // by default its false, open brouser conaole and see difference by yourself 
+    // },false)  // by default its false, open brouser conaole and see difference by yourself 
 
     
 
@@ -71,24 +71,31 @@
     
 
 
-    document.getElementById('electric').addEventListener('click',function(e){
-        e.stopPropagation()//stops bubbling and go to its above element
-        // console.log("electric clicked");
+    // document.getElementById('electric').addEventListener('click',function(e){
+    //     e.stopPropagation() //stops bubbling and go to its above element(line 61 has to be false)
+    //     console.log('electric blue is clicked');
         
-    },false) // by default its false, open brouser conaole and see difference by yourself 
+    //     // console.log("electric clicked");
+        
+    // },false) // by default its false, open brouser console and see difference by yourself 
 
 
 
 
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault() // stops from going to its default behaviour
+    //     e.stopPropagation()
+    //     console.log('google clicked');
+    // },false)
 
-    document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault() // stops from going to its default behaviour
-        e.stopPropagation()
-        console.log('google clicked');
+    
+    // ////////////////////////////////////////////
+
+    document.querySelector('#images').addEventListener('click',function(evnt){
+        console.log(evnt.target.parentNode);
         
     },false)
 
-    
 
     </script>
 

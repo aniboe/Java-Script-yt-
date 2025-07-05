@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dont know haha</h1>
+    <button id="stat">start</button>
+    <button id="stop">stop</button>
+ 
+</body>
+<script>
+    const sayNameDate = function(str){
+        console.log(str,Date.now())};
+    const interValId = setInterval(sayNameDate,1000, "hi")
+
+    clearInterval(interValId)
+</script>
+</html>

@@ -7,15 +7,32 @@
 </head>
 <body>
     <h1>dont know haha</h1>
-    <button id="stat">start</button>
+    <button id="start">start</button>
     <button id="stop">stop</button>
  
 </body>
 <script>
     const sayNameDate = function(str){
         console.log(str,Date.now())};
-    const interValId = setInterval(sayNameDate,1000, "hi")
 
-    clearInterval(interValId)
+    let interValId
+    const startp = function(){
+        console.log('start');
+        // interValId = setInterval(sayNameDate,1000, "hi")
+        interValId = setInterval(() => sayNameDate("anisur"), 1000);
+
+    }
+
+    const stopp = function(){
+        console.log('stop');
+        clearInterval(interValId)
+    }
+
+
+
+    document.getElementById('start').addEventListener('click',startp)
+
+
+    document.getElementById('stop').addEventListener('click',stopp)
 </script>
 </html>

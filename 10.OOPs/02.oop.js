@@ -5,11 +5,11 @@ const user = {
 
     getUserDetails: function(){
         // console.log("got user details from database");
-        console.log(`Username: ${this.username}`);
-        console.log(this);
+        // console.log(`Username: ${this.username}`);
+        // console.log(this);
         
         
     }
 }
 console.log(user.username);
-console.log(user.getUserDetails());
+// console.log(user.getUserDetails());

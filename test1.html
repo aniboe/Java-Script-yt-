@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript youtube</title>
+</head>
+<body style="background-color: rgb(42, 53, 62);color: whitesmoke;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    // add val
+    function addname(val){
+        const list = document.createElement('li')
+        list.innerHTML = `${val}`
+        document.querySelector('ul').appendChild(list)
+    }
+    addname('lol')
+
+    // add val optmised
+    function addval(val){
+        const where = document.createElement('li')
+        where.appendChild(document.createTextNode(val))
+        document.querySelector('.language').appendChild(where)
+    }
+    addval('eggs')
+
+    // replace value
+    function replaceval(val){
+        // __________________________________________________
+        // const old = document.querySelector('li:last-child')
+        // old.textContent = val
+        // __________________________^this works 
+
+        const old = document.querySelector('li:last-child')
+        const newval = document.createElement('li')
+        newval.textContent = val
+        old.replaceWith(newval)
+    }replaceval("ertyy")
+    
+
+
+    function replace2(){
+        const rum = document.querySelector('li:first-child')
+        rum.outerHTML = "<li>lakjdfh</li>"
+    }
+    replace2()
+
+
+    // remove value
+    // function removeval(){
+    //     // document.querySelector('li:last-child').remove()
+    //     const remove = document.querySelector('li:last-child')
+    //     remove.remove()
+    // }removeval()
+
+
+   </script>
+</html>

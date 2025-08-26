@@ -1,0 +1,24 @@
+<!-- leaned someting new -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>more eggs?</h1>
+    <button>start</button>
+</body>
+<script>
+    let stopMltipleRefrence = null // to stop from multiple refrence from creating on every click
+    const eggs = function(){
+        if(!stopMltipleRefrence){ // if cosition to make it work
+            stopMltipleRefrence = setInterval(function(){
+                console.log('here are eggs'); 
+            },1000)
+        }
+    }
+    document.querySelector('button').addEventListener('click',eggs)
+</script>
+</html>

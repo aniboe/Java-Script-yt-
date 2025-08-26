@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seggs</title>
+</head>
+<body>
+    <h1>eggs?  </h1>
+    <button id="button1" style="width: 40px;">yes</button>
+    <button id="button2" style="width: 40px;">no </button>
+</body>
+
+<script>
+
+let wantEggs
+const yesEggs = function(){
+    if(!wantEggs){
+        wantEggs = setInterval(function(){
+        console.log('eggs');    
+        },1000)
+    }
+    
+}
+
+// if yes
+document.querySelector("#button1").addEventListener('click', yesEggs)
+
+// if no
+document.querySelector("#button2").addEventListener('click',function(){
+    clearInterval(wantEggs)
+    console.log('no more eggs for you');
+    wantEggs = null
+})
+    
+
+</script>
+</html> 

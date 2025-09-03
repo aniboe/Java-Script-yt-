@@ -32,3 +32,47 @@
     xhr.send()
 </script>
 </html>
+
+<!-- _____________________________i did it again ________________ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request</title>
+    <div class="insertImg" style="width: 60px;">
+    </div>
+</head>
+<body>
+    <script>
+        const requestURL = 'https://api.github.com/users/aniboe'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', requestURL)  //there can be ither things ther than 'GET' look into documentation  
+
+
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            
+            if (xhr.readyState === 4){
+
+                // console.log(this.responseText); //givesjson in object form('string')
+                
+                const jsonData = JSON.parse(this.responseText); // converting object into JSON
+                console.log(jsonData);
+                console.log(jsonData.followers);
+                document.querySelector('.insertImg').innerHTML = `<img  src = ${jsonData.avatar_url}>
+                <p>${jsonData.followers}</p>`
+                
+                
+                // now make beautifull looking card  
+                
+            }
+        }
+
+        
+        xhr.send() // this makes call 
+    </script>
+    
+</body>
+</html>

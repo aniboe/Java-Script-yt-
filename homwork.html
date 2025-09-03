@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cntainer">
+        <div id="pic">
+            <img id = 'im' src = "" style="width: 200px;">
+        </div>
+        <div id="follower"></div>
+    </div>
+</body>
+<script>
+    const Url = "https://api.github.com/users/aniboe"
+    const xmlreq = new XMLHttpRequest()
+
+    xmlreq.open('GET',Url)
+
+    xmlreq.onreadystatechange = function(){
+        // console.log(xmlreq.readyState);
+        
+        if (xmlreq.readyState === 4){
+            const jsdata = JSON.parse(this.responseText)
+            // console.log(jsdata);
+            
+            document.querySelector('#im').src = jsdata.avatar_url
+            document.querySelector('#follower').textContent = `follower count: ${jsdata.followers}`
+        }
+    }
+    xmlreq.send()
+</script>
+
+
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        
+    }
+    body{
+        background-color: rgb(19, 26, 32);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        
+    }
+    #cntainer{
+        background-color: blanchedalmond;
+        width: 400px;
+        height: 200px;
+        border-radius: 10px;
+        display: flex;
+        overflow: hidden;
+    }
+    #pic{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+    }
+    #follower{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(235, 207, 207);
+    }
+</style>
+</html>

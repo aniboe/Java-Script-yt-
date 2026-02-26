@@ -37,4 +37,20 @@ function User(username, loginCount, isloggegIn){
 const user1 = new User("anisur",12 , true)
 const user2 = new User("code and chil", 11, false) // by adding new keyword we resolve above issue and doesnt give excess details in terminal
 console.log(user1.constructor);
-// console.log(user2);
+console.log(user2.greetings);// gives refrence of greetings
+console.log(user2.greetings()); // runs function inside and returns value(undefined in this case because no return)
+
+
+// //  from mdn "instanceof"
+// function Car(make, model, year) {
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
+// }
+// const auto = new Car("Honda", "Accord", 1998);
+
+// console.log(auto instanceof Car);
+// // Expected output: true
+
+// console.log(auto instanceof Object);
+// // Expected output: true

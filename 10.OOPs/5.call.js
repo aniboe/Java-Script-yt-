@@ -11,6 +11,8 @@ function createUser(user, email, password){
                             setUserName has executed it is erased from call stack so it doesnt,
                             and doesnt return any value*/
     setUserName.call(this, user) // this works because we are passing current context of this function so 
+    /*we are passing context of this funtion into setUserName,
+     so it rerutns value into this function instead of disappearing  */
     this.user = user
     this.email = email
 }

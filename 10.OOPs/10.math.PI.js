@@ -80,6 +80,38 @@ console.log(Object.getOwnPropertyDescriptor(chai, "name"));
     Plain JavaScript objects {} are never directly iterable using for...of, regardless of whether you changed the "enumerable" property or not. 
     To loop through any object with for...of, you always have to convert it using "Object.entries(obj)", "Object.keys(obj)", or "Object.values(obj)". 
     Turning enumerable: false simply hid the name property from showing up inside that entries loop!
+
+    
+
+    NOTE: here is example for both ("Object.keys(obj)", or "Object.values(obj)") // they both create Array that can be iterated using for....off
+
+    const developer = {
+        name: "ginger",
+        price: 100,
+        isAvailable: true,
+    }
+
+    // ---------------------------Object.keys(objname);-----------------------------
+    const keysArray = Object.keys(developer);
+    console.log(keysArray); 
+    // Output: [ 'name', 'role', 'experienceYears', 'isRemote' ]
+
+    // Now you can easily loop through just the keys:
+    for (let key of Object.keys(developer)) {
+        console.log(`Key name: ${key}`);
+    }
+
+
+    // ---------------------------Object.values(objname);-----------------------------
+    const valuesArray = Object.values(developer);
+    console.log(valuesArray); 
+    // Output: [ 'Anisur', 'Frontend Engineer', 3, true ]
+
+    // You can use this to quickly check or loop through the actual data:
+    for (let value of Object.values(developer)) {
+        console.log(`Value data: ${value}`);
+    }
+    // --------------------------------------------------------
 */
 
 

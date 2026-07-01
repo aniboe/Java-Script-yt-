@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+    <button>Button clocked</button>
+</body>
+
+
+<script>
+    class React{
+        constructor(){
+            this.library = "react"
+            this.server = "server started at localhost"
+
+            // reuirement
+            document.querySelector('button')
+            .addEventListener("click", this.handelClick) //  this does make the click work but the "handelClick" functio doesnt get context to the content indide React constructor function
+            .addEventListener("click", this.handelClick.bind(this)) // by binding the context function is able to get access to the context
+        }
+        handelClick(){
+            console.log("button clicked");
+            console.log(this);
+            console.log(this.server);
+        }
+    }
+    const app = new React()
+</script>
+
+<!-- NOTE: this is not realy used so dont realy pay attention to this topic much -->
+
+
+
+</html>

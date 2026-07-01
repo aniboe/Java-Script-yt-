@@ -75,7 +75,12 @@ console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 // for(let [key, value ] of chai){
 //     console.log(`${key} ${value}`);
 // }
-// oputput: TypeError: chai is not iterable // since we disabled enumerable in name property
+// oputput: TypeError: chai is not iterable 
+/*
+    Plain JavaScript objects {} are never directly iterable using for...of, regardless of whether you changed the "enumerable" property or not. 
+    To loop through any object with for...of, you always have to convert it using "Object.entries(obj)", "Object.keys(obj)", or "Object.values(obj)". 
+    Turning enumerable: false simply hid the name property from showing up inside that entries loop!
+*/
 
 
 // but we can still iterate it using loop by following method

@@ -6,10 +6,13 @@ function setUserName(username){
 }
 
 function createUser(user, email, password){
-    /*setUserName(user) // this method doesnt work because its not calling the function
-    setUserName.call(user) //this method does call but,
-                            setUserName has executed it is erased from call stack so it doesnt,
-                            and doesnt return any value*/
+    /*
+    setUserName(user) // this method doesnt work because its not calling the function
+    setUserName.call(user)  // this method doesnt work because, 
+                            // we are not passing "this" which points to the 
+                            // empty object created when "new createUser" was called
+    */
+    
     setUserName.call(this, user) // this works because we are passing current context of this function so 
     /*we are passing context of this funtion into setUserName,
      so it rerutns value into this function instead of disappearing  */

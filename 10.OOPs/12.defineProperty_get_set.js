@@ -22,7 +22,7 @@ function User(email, password){
 }
 
 const ch = new User("lol@haha.lol", "lololol")
-
+ 
 console.log(ch); 
 console.log(ch.email); 
 console.log(ch.password); 
